@@ -11,5 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: build checker
-      - uses: bretfisher/super-linter-workflow/.github/workflows/reusable-super-linter.yaml@main
+      - name: Lint python
+        uses: github/super-linter@v4
+        env:
+          VALIDATE_ALL_CODEBASE: true
+          DEFAULT_BRANCH: main
+          GETHUB_TOKEN: ${{ secretes.GETHUB_TOKEN }}
+          VALIDATE_PYTHON: true
