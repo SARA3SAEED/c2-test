@@ -6,11 +6,11 @@ on:
       - main
 
 
-Jobs:
+jobs:
   readme-checker:
     runs-on: ubuntu-latest
-  steps:
-    - uses: actions/checkout@v2
-    - name: build checker
-      run : |
-        ls -all
+    steps:
+      - uses: actions/checkout@v2
+      - name: build checker
+        run : |
+          ls -all
