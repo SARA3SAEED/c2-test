@@ -7,7 +7,9 @@ on:
 
 
 jobs:
-  call-super-linter:
-    name: Call Super-Linter
+  readme-checker:
+    runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
+      - name: build checker
       - uses: bretfisher/super-linter-workflow/.github/workflows/reusable-super-linter.yaml@main
