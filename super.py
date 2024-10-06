@@ -2,6 +2,5 @@ import os
 
 
 def hello():
-    {
-        print("hi")
-    }
+    print("hi")
+    
