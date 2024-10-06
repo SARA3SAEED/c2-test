@@ -1,16 +1,13 @@
 name : Readme checker
 
 on:
-  push:
+  pull_request:
     branches:
       - main
 
 
 jobs:
-  readme-checker:
-    runs-on: ubuntu-latest
+  call-super-linter:
+    name: Call Super-Linter
     steps:
-      - uses: actions/checkout@v2
-      - name: build checker
-        run : |
-          ls -all
+      - uses: bretfisher/super-linter-workflow/.github/workflows/reusable-super-linter.yaml@main
