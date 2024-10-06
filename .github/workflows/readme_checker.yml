@@ -1,7 +1,32 @@
+# PUSH REQUEST:
+
+# name : Readme checker
+
+# on:
+#   push:
+#     branches:
+#       - main
+
+
+# jobs:
+#   linter:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v2
+#       - name: Lint python
+#         uses: github/super-linter@v4
+#         env:
+#           VALIDATE_ALL_CODEBASE: true
+#           DEFAULT_BRANCH: main
+#           GETHUB_TOKEN: ${{ secrets.GETHUB_TOKEN }}
+#           VALIDATE_PYTHON: true
+
+
+# PULL REQUEST:
 name : Readme checker
 
 on:
-  push:
+  pull_request:
     branches:
       - main
 
