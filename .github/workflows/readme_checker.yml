@@ -16,5 +16,5 @@ jobs:
         env:
           VALIDATE_ALL_CODEBASE: true
           DEFAULT_BRANCH: main
-          GETHUB_TOKEN: ${{ secretes.GETHUB_TOKEN }}
+          GETHUB_TOKEN: ${{ secrets.GETHUB_TOKEN }}
           VALIDATE_PYTHON: true
