@@ -1,0 +1,16 @@
+name : Readme checker
+
+on:
+  pull_request:
+    branches:
+      - main
+
+
+Jobs:
+  readme_check:
+    runs_on: ubuntu-latest
+  steps:
+    - uses: actions/checkout@v2
+    - name: build checker
+      run : |
+        ls -all
